@@ -1,0 +1,305 @@
+/*
+Theme Name: Commercial Heat Pumps
+Theme URI: https://commercialheatpumps.com.au
+Author: Website Landlords
+Description: Commercial Heat Pumps - B2B lead generation and informational site for commercial/industrial heat pump systems across Australia. Sharp, modern, technical, authoritative.
+Version: 0.1.0
+*/
+
+:root {
+	--chp-navy: #0e2749;
+	--chp-navy-dark: #081729;
+	--chp-orange: #e8641f;
+	--chp-orange-dark: #c74f13;
+	--chp-bg: #f5f7fa;
+	--chp-white: #ffffff;
+	--chp-ink: #1a212e;
+	--chp-slate: #5b6472;
+	--chp-line: #e1e6ec;
+	--space-xs: 0.5rem;
+	--space-sm: 1rem;
+	--space-md: 1.75rem;
+	--space-lg: 3rem;
+	--space-xl: 5rem;
+	--radius-md: 8px;
+	--radius-lg: 14px;
+	--shadow-card: 0 12px 28px -14px rgba(14, 39, 73, 0.28), 0 2px 6px rgba(14, 39, 73, 0.12);
+	--shadow-card-hover: 0 20px 40px -16px rgba(14, 39, 73, 0.38), 0 4px 10px rgba(14, 39, 73, 0.16);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+	margin: 0;
+	font-family: 'Inter', system-ui, sans-serif;
+	color: var(--chp-ink);
+	background: var(--chp-bg);
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Space Grotesk', system-ui, sans-serif;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: 1.1;
+	color: var(--chp-navy);
+	margin: 0 0 var(--space-sm);
+}
+
+h1 { font-size: clamp(2.25rem, 4.5vw, 3.25rem); letter-spacing: -0.03em; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
+p { margin: 0 0 var(--space-sm); color: var(--chp-slate); }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-md); }
+
+/* ---------- Header ---------- */
+.site-header {
+	background: var(--chp-white);
+	border-bottom: 1px solid var(--chp-line);
+	position: sticky;
+	top: 0;
+	z-index: 50;
+}
+
+.site-header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: var(--space-xs);
+	padding-bottom: var(--space-xs);
+	gap: var(--space-md);
+}
+
+.site-header .logo-link { display: flex; align-items: center; text-decoration: none; }
+.site-header .logo-link img { height: 40px; width: auto; }
+
+.primary-nav ul {
+	list-style: none;
+	display: flex;
+	gap: var(--space-md);
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap;
+}
+
+.primary-nav a {
+	color: var(--chp-navy);
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 0.95rem;
+	padding: 0.4rem 0.1rem;
+	border-bottom: 2px solid transparent;
+	transition: border-color 160ms ease, color 160ms ease;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus-visible { border-color: var(--chp-orange); color: var(--chp-orange-dark); }
+
+.header-cta {
+	background: var(--chp-orange);
+	color: var(--chp-white);
+	font-weight: 600;
+	padding: 0.65rem 1.35rem;
+	border-radius: var(--radius-md);
+	text-decoration: none;
+	white-space: nowrap;
+	transition: transform 160ms cubic-bezier(0.2, 0.9, 0.3, 1.3), box-shadow 160ms ease, background 160ms ease;
+	box-shadow: 0 6px 16px -6px rgba(232, 100, 31, 0.55);
+}
+
+.header-cta:hover { transform: translateY(-2px); background: var(--chp-orange-dark); }
+.header-cta:active { transform: translateY(0); }
+.header-cta:focus-visible { outline: 3px solid var(--chp-navy); outline-offset: 2px; }
+
+/* ---------- Hero ---------- */
+.hero {
+	position: relative;
+	color: var(--chp-white);
+	padding: var(--space-xl) 0;
+	overflow: hidden;
+}
+
+.hero::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-image: url('assets/images/hero-plant-room.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.hero::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(100deg, rgba(8, 23, 41, 0.94) 0%, rgba(8, 23, 41, 0.82) 45%, rgba(8, 23, 41, 0.55) 100%);
+}
+
+.hero .container { position: relative; z-index: 2; max-width: 720px; }
+
+.hero .eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	background: rgba(232, 100, 31, 0.15);
+	border: 1px solid var(--chp-orange);
+	color: #ffb385;
+	font-weight: 600;
+	font-size: 0.78rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	padding: 0.35rem 0.85rem;
+	border-radius: 999px;
+	margin-bottom: var(--space-sm);
+}
+
+.hero h1 { color: var(--chp-white); }
+.hero p.lede { font-size: 1.15rem; color: #cbd5e3; max-width: 50ch; }
+
+.hero .hero-actions { display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-md); }
+
+.btn {
+	display: inline-block;
+	padding: 0.9rem 1.7rem;
+	border-radius: var(--radius-md);
+	font-weight: 600;
+	text-decoration: none;
+	transition: transform 160ms cubic-bezier(0.2, 0.9, 0.3, 1.3), box-shadow 160ms ease, background 160ms ease;
+}
+
+.btn-primary { background: var(--chp-orange); color: var(--chp-white); box-shadow: 0 10px 24px -10px rgba(232, 100, 31, 0.6); }
+.btn-primary:hover { transform: translateY(-3px); background: var(--chp-orange-dark); }
+.btn-primary:focus-visible { outline: 3px solid var(--chp-white); outline-offset: 2px; }
+
+.btn-ghost { background: transparent; color: var(--chp-white); border: 1.5px solid rgba(255, 255, 255, 0.4); }
+.btn-ghost:hover { border-color: var(--chp-white); transform: translateY(-3px); }
+.btn-ghost:focus-visible { outline: 3px solid var(--chp-orange); outline-offset: 2px; }
+
+.trust-strip {
+	margin-top: var(--space-lg);
+	display: flex;
+	gap: var(--space-md);
+	flex-wrap: wrap;
+	font-size: 0.85rem;
+	color: #a9b7c9;
+	font-weight: 500;
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	padding-top: var(--space-md);
+}
+
+/* ---------- Sections ---------- */
+.section { padding: var(--space-xl) 0; }
+.section-alt { background: var(--chp-white); }
+.section-heading { max-width: 680px; margin: 0 auto var(--space-lg); text-align: center; }
+.section-heading .kicker {
+	display: block;
+	color: var(--chp-orange-dark);
+	font-weight: 700;
+	font-size: 0.8rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	margin-bottom: var(--space-xs);
+}
+
+/* ---------- Grids (systems / industry) ---------- */
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-md); }
+
+.tech-card {
+	background: var(--chp-white);
+	border: 1px solid var(--chp-line);
+	border-radius: var(--radius-lg);
+	padding: var(--space-md);
+	box-shadow: var(--shadow-card);
+	text-decoration: none;
+	color: var(--chp-ink);
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	transition: transform 200ms cubic-bezier(0.2, 0.9, 0.3, 1.3), box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.tech-card:hover, .tech-card:focus-visible {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-card-hover);
+	border-color: var(--chp-orange);
+	outline: none;
+}
+
+.tech-card:focus-visible { outline: 3px solid var(--chp-navy); outline-offset: 3px; }
+.tech-card .tag { color: var(--chp-orange-dark); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.tech-card h3 { font-size: 1.15rem; margin-bottom: 0.15rem; }
+.tech-card p { font-size: 0.92rem; margin-bottom: 0; }
+.tech-card .arrow { margin-top: auto; font-weight: 700; color: var(--chp-navy); padding-top: 0.5rem; }
+
+/* ---------- Proof / photo strip ---------- */
+.proof-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-sm); }
+.proof-photo { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4 / 3; }
+.proof-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- ROI form section ---------- */
+.roi-band { background: var(--chp-navy); color: var(--chp-white); }
+.roi-band .section-heading h2 { color: var(--chp-white); }
+.roi-band .section-heading p { color: #b7c3d4; }
+.roi-band .kicker { color: #ff9a5c; }
+
+.roi-form {
+	background: var(--chp-white);
+	color: var(--chp-ink);
+	max-width: 640px;
+	margin: 0 auto;
+	padding: var(--space-lg);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-card);
+}
+
+.form-row { margin-bottom: var(--space-sm); }
+.form-row label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.35rem; color: var(--chp-navy); }
+.form-row input,
+.form-row select,
+.form-row textarea {
+	width: 100%;
+	padding: 0.7rem 0.85rem;
+	border-radius: var(--radius-md);
+	border: 1px solid var(--chp-line);
+	font-family: inherit;
+	font-size: 0.95rem;
+	background: var(--chp-bg);
+	transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+	outline: none;
+	border-color: var(--chp-orange);
+	box-shadow: 0 0 0 3px rgba(232, 100, 31, 0.18);
+}
+
+.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+@media (max-width: 560px) { .form-grid-2 { grid-template-columns: 1fr; } }
+
+.form-note { font-size: 0.82rem; color: var(--chp-slate); margin-top: var(--space-xs); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--chp-navy-dark); color: #c7d0dc; padding: var(--space-lg) 0 var(--space-md); font-size: 0.9rem; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-md); margin-bottom: var(--space-md); }
+.footer-grid > div { min-width: 0; }
+.site-footer h4 { color: var(--chp-white); font-size: 0.95rem; margin-bottom: var(--space-xs); }
+.site-footer p, .site-footer a { overflow-wrap: break-word; word-break: break-word; }
+.site-footer a { text-decoration: none; color: #c7d0dc; }
+.site-footer a:hover { color: var(--chp-orange); }
+
+.footer-bottom {
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	padding-top: var(--space-sm);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: var(--space-xs);
+	color: #7c8a9c;
+	font-size: 0.8rem;
+}
