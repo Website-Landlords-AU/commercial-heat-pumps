@@ -69,13 +69,13 @@ a { color: inherit; }
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-top: var(--space-xs);
-	padding-bottom: var(--space-xs);
+	padding-top: 0.65rem;
+	padding-bottom: 0.65rem;
 	gap: var(--space-md);
 }
 
 .site-header .logo-link { display: flex; align-items: center; text-decoration: none; }
-.site-header .logo-link img { height: 40px; width: auto; }
+.site-header .logo-link img { height: 64px; width: auto; }
 
 .primary-nav ul {
 	list-style: none;
@@ -236,9 +236,20 @@ a { color: inherit; }
 .tech-card .arrow { margin-top: auto; font-weight: 700; color: var(--chp-navy); padding-top: 0.5rem; }
 
 /* ---------- Proof / photo strip ---------- */
-.proof-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-sm); }
-.proof-photo { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4 / 3; }
-.proof-photo img { width: 100%; height: 100%; object-fit: cover; }
+.proof-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); }
+@media (max-width: 820px) { .proof-strip { grid-template-columns: 1fr; } }
+.proof-photo {
+	position: relative;
+	border-radius: var(--radius-lg);
+	overflow: hidden;
+	box-shadow: var(--shadow-card);
+	aspect-ratio: 3 / 4;
+	background: var(--chp-navy);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.proof-photo img { width: 100%; height: 100%; object-fit: contain; }
 
 /* ---------- ROI form section ---------- */
 .roi-band { background: var(--chp-navy); color: var(--chp-white); }

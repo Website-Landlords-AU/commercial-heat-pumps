@@ -126,13 +126,13 @@ get_header();
 			</div>
 			<div class="proof-strip">
 				<div class="proof-photo">
-					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/job-rooftop-tanks.jpg' ); ?>" alt="Rooftop commercial hot water tank array" loading="lazy">
+					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/job-polished-tanks.jpg' ); ?>" alt="Polished stainless commercial hot water tanks with copper pipework" loading="lazy">
 				</div>
 				<div class="proof-photo">
-					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/job-exterior-install.jpg' ); ?>" alt="Exterior commercial heat pump installation with hot water tank" loading="lazy">
+					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/job-rooftop-row.jpg' ); ?>" alt="Row of commercial hot water tanks on a rooftop installation" loading="lazy">
 				</div>
 				<div class="proof-photo">
-					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/job-parts-detail.jpg' ); ?>" alt="Commercial heat pump system parts and copper pipework" loading="lazy">
+					<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/job-exterior-stairs.jpg' ); ?>" alt="Commercial heat pump and tank installation on an exterior wall" loading="lazy">
 				</div>
 			</div>
 		</div>
